@@ -7,6 +7,7 @@ namespace PLClient {
         public App() {
             InitializeComponent();
 
+            App.Current.UserAppTheme = OSAppTheme.Light;
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
