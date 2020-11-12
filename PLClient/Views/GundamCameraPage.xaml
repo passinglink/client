@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PLClient.Views.GundamCameraPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:PLClient.ViewModels"  
+             xmlns:model="clr-namespace:PLClient.Models">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Player 1" Grid.Row="0" Grid.Column="0" Command="{Binding SwitchCameraCommand}" CommandParameter="1" />
+            <Button Text="Player 2" Grid.Row="1" Grid.Column="0" Command="{Binding SwitchCameraCommand}" CommandParameter="2" />
+            <Button Text="Player 3" Grid.Row="0" Grid.Column="1" Command="{Binding SwitchCameraCommand}" CommandParameter="3" />
+            <Button Text="Player 4" Grid.Row="1" Grid.Column="1" Command="{Binding SwitchCameraCommand}" CommandParameter="4" />
+            <Button Text="Team 1" Grid.Row="2" Grid.Column="0" Command="{Binding SwitchCameraCommand}" CommandParameter="7" />
+            <Button Text="Team 2" Grid.Row="2" Grid.Column="1" Command="{Binding SwitchCameraCommand}" CommandParameter="8" />
+            <Button Text="Map view" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" Command="{Binding SwitchCameraCommand}" CommandParameter="5" />
+            <Button Text="Split screen" Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="2" Command="{Binding SwitchCameraCommand}" CommandParameter="6" />
+            <Button Text="Dynamic" Grid.Row="5" Grid.Column="0"  Grid.ColumnSpan="2" Command="{Binding SwitchCameraCommand}" CommandParameter="9" />
+            <Button Text="Reset" BackgroundColor="Red" Grid.Row="6" Grid.Column="0"  Grid.ColumnSpan="2" Command="{Binding ResetCameraCommand}" />
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

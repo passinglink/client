@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PLClient.Views.InputPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:PLClient.ViewModels"  
+             xmlns:model="clr-namespace:PLClient.Models">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="←" Grid.Row="1" Grid.Column="0" Command="{Binding InputCommand}" CommandParameter="left" />
+                <Button Text="↑" Grid.Row="0" Grid.Column="1" Command="{Binding InputCommand}" CommandParameter="up" />
+                <Button Text="↓" Grid.Row="2" Grid.Column="1" Command="{Binding InputCommand}" CommandParameter="down" />
+                <Button Text="→" Grid.Row="1" Grid.Column="2" Command="{Binding InputCommand}" CommandParameter="right" />
+
+                <Button Text="SEL" Grid.Row="0" Grid.Column="3" Command="{Binding InputCommand}" CommandParameter="select" />
+                <Button Text="HOME" Grid.Row="1" Grid.Column="4" Command="{Binding InputCommand}" CommandParameter="home" />
+                <Button Text="START" Grid.Row="0" Grid.Column="5" Command="{Binding InputCommand}" CommandParameter="start" />
+
+                <Button Text="□" Grid.Row="1" Grid.Column="6" Command="{Binding InputCommand}" CommandParameter="west" />
+                <Button Text="△" Grid.Row="0" Grid.Column="7" Command="{Binding InputCommand}" CommandParameter="north" />
+                <Button Text="×" Grid.Row="2" Grid.Column="7" Command="{Binding InputCommand}" CommandParameter="south" />
+                <Button Text="○" Grid.Row="1" Grid.Column="8" Command="{Binding InputCommand}" CommandParameter="east" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
+    

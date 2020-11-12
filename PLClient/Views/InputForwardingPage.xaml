@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PLClient.Views.InputForwardingPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:PLClient.ViewModels"  
+             xmlns:model="clr-namespace:PLClient.Models">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Selected controller" FontSize="Title" />
+                <Label Text="{Binding ControllerName}" FontSize="16" Padding="0,0,0,0"/>
+                <Button Text="{Binding ForwardButtonText}" Command="{Binding ToggleForwardingCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

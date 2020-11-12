@@ -2,13 +2,13 @@
 using Xamarin.Forms;
 
 namespace PLClient.Views {
-    public partial class ItemsPage : ContentPage {
-        ItemsViewModel _viewModel;
+    public partial class GundamCameraPage : ContentPage {
+        GundamCameraViewModel _viewModel;
 
-        public ItemsPage() {
+        public GundamCameraPage() {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new GundamCameraViewModel();
         }
 
         protected override void OnAppearing() {

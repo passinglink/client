@@ -19,6 +19,7 @@ namespace PLClient.UWP {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             this.ShinyInit(new PLShinyStartup());
+            Xamarin.Forms.DependencyService.Register<PLGamepadService>();
         }
 
         /// <summary>
